@@ -11,10 +11,14 @@ public class Triangle extends Shape {
    
    public double getArea(){
       double s = this.getPerimeter()/2;
-      return Math.sqrt( s * (s - this.getSize1()) * (s - this.getSize2() ) * (s - this.getSize3() ) );
+      return Math.sqrt( s * (s - this.getSide1()) * (s - this.getSide2() ) * (s - this.getSide3() ) );
    }
    
    public double getPerimeter(){
-      return this.getSize1() + this.getSize2() + this.getSize3();
+      return this.getSide1() + this.getSide2() + this.getSide3();
+   }
+   
+   public String toString(){
+      return "Triangle with sides: " +getSide1()+" "+getSide2()+" "+getSide3() + " area: " + getArea() + " perimeter: " + getPerimeter() + "\n";
    }
 }

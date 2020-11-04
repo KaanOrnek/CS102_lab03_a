@@ -20,4 +20,5 @@ public class Square extends Rectangle {
    public String toString(){
       return "Square with side: " + getSide1() + " area: " + getArea() + " perimeter: " + getPerimeter() + "\n";
    }
+ 
 }

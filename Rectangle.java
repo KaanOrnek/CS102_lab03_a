@@ -18,4 +18,5 @@ public class Rectangle extends Shape
    public String toString(){
       return "Rectangle with sides: " + getSide1()+" "+getSide2() + " area: " + getArea() + " perimeter: " + getPerimeter() + "\n";
    }
+  
 }

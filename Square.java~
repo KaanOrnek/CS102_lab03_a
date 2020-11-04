@@ -12,7 +12,12 @@ public class Square extends Rectangle {
    public double getArea(){
       return super.getArea();
    }
+   
    public double getPerimeter(){
       return super.getPerimeter();
+   }
+   
+   public String toString(){
+      return "Square with side: " + getSide1() + " area: " + getArea() + " perimeter: " + getPerimeter() + "\n";
    }
 }

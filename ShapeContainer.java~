@@ -1,0 +1,40 @@
+/*
+ * CS102 Lab03-A
+ * Mehmet Kaan Örnek 21901637
+ * 04.11.2020
+ */
+public class ShapeContainer {
+   
+   private ArrayList<Shape> container;
+   
+   public ShapeContainer(){
+      container = new ArrayList<Shape>;
+   }
+   public void add( Shape s ){
+      container.add( s );
+   }
+   
+   public double getArea() {
+      double sum;
+      for( int i = 0; i < container.length; i++ ){
+         sum += container(i).getArea();
+      }
+      return sum;
+   }
+   
+   public double getPerimeter() {
+      double sum;
+      for( int i = 0; i < container.length; i++ ){
+         sum += container(i).getPerimeter();
+      }
+      return sum;
+   }
+   
+   public String toString(){
+      String final;
+      for( int i = 0; i < container.length; i++ ){
+         final += container(i).toString() + " ";
+      }
+      return final;
+   }
+}

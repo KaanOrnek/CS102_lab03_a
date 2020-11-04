@@ -14,4 +14,8 @@ public class Rectangle extends Shape
    public double getPerimeter(){
       return 2*(this.getSide1() + this.getSide2());
    }
+   
+   public String toString(){
+      return "Rectangle with sides: " + getSide1()+" "+getSide2() + " area: " + getArea() + " perimeter: " + getPerimeter() + "\n";
+   }
 }
