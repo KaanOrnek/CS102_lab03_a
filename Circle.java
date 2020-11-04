@@ -18,7 +18,13 @@ public class Circle extends Shape {
    }
    
    public String toString(){
-      return "Circle with radius: " + super.getRadius() + " area: " + getArea() + " perimeter: " + getPerimeter() + "\n";
+      return "Circle with radius: " + super.getRadius() + " area: " + getArea() + " perimeter: " + getPerimeter() + "selected: " + getSelected() + "\n";
    }
    
+   public Shape contains( int x, int y ){
+      double distanceOfPoint = Math.sqrt( ( (y-this.getY() )*( y-this.getY() ) )+((x-this.getX())*(x-this.getX()) ));
+      if( distanceOfPoint <= getRadius() )
+         return this;
+      return null;
+   }
 }

@@ -19,6 +19,16 @@ public class Triangle extends Shape {
    }
    
    public String toString(){
-      return "Triangle with sides: " +getSide1()+" "+getSide2()+" "+getSide3() + " area: " + getArea() + " perimeter: " + getPerimeter() + "\n";
+      return "Triangle with sides: " +getSide1()+" "+getSide2()+" "+getSide3() + " area: " + getArea() + " perimeter: " + getPerimeter() + " selected: " + getSelected() + "\n";
+   }
+   
+   public Shape contains( int x, int y ){
+      
+      double distanceOfPoint = Math.sqrt( ( (y-this.getY() )*( y-this.getY() ) )+((x-this.getX())*(x-this.getX()) ));
+      double radius = (this.getSide1()*this.getSide2()*this.getSide3()) / (4*this.getArea() );
+      
+      if( distanceOfPoint <= radius )
+         return this;
+      return null;
    }
 }
