@@ -1,0 +1,21 @@
+/*
+ * CS102 Lab03-A
+ * Mehmet Kaan Örnek 21901637
+ * 04.11.2020
+ */
+public class Rectangle extends Shape
+{
+   public Rectangle( int width, int height ) {
+      super( width, height );
+   }
+   public double getArea(){
+      return this.getSide1() * this.getSide2();
+   }
+   public double getPerimeter(){
+      return 2*(this.getSide1() + this.getSide2());
+   }
+   
+   public String toString(){
+      return "Rectangle with sides: " + getSide1()+" "+getSide2() + " area: " + getArea() + " perimeter: " + getPerimeter() + "\n";
+   }
+}

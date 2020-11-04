@@ -1,0 +1,20 @@
+/*
+ * CS102 Lab03-A
+ * Mehmet Kaan Örnek 21901637
+ * 04.11.2020
+ */
+public class Triangle extends Shape {
+   
+   public Triangle( int a, int b, int c ){
+      super( a,b,c );
+   }
+   
+   public double getArea(){
+      double s = this.getPerimeter()/2;
+      return Math.sqrt( s * (s - this.getSize1()) * (s - this.getSize2() ) * (s - this.getSize3() ) );
+   }
+   
+   public double getPerimeter(){
+      return this.getSize1() + this.getSize2() + this.getSize3();
+   }
+}
