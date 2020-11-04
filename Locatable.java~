@@ -1,0 +1,12 @@
+/*
+ * CS102 Lab03-A
+ * Mehmet Kaan Örnek 21901637
+ * 04.11.2020
+ */
+public interface Locatable() {
+   public int x = xLoc;
+   public int y = yLoc;
+   public void setLocation( int x, int y );
+   public int GetX();
+   public int GetY();
+}
